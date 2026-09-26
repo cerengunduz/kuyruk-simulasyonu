@@ -1,0 +1,23 @@
+# Hava Savunma / Tehdit Saptama Kuyruk Simülasyonu - Varsayılan Parametreler
+# Tüm süreler dakika (dk) cinsindendir.
+
+arrival_rate: 0.4          # Tehdit varış oranı (lambda), adet/dakika
+priority_probs:            # Tehdit öncelik dağılımı (toplam 1.0 olmalı)
+  high: 0.2
+  medium: 0.5
+  low: 0.3
+
+num_radars: 2               # Aşama 1: Radar / Tespit kaynağı sayısı
+detect_mean_time: 2.0        # Ortalama tespit süresi (dk)
+
+num_classifiers: 2           # Aşama 2: Sınıflandırma istasyonu sayısı
+classify_mean_time: 1.5      # Ortalama sınıflandırma süresi (dk)
+
+num_batteries: 1             # Aşama 3: Angajman / İmha bataryası sayısı
+engage_mean_time: 3.0        # Ortalama angajman süresi (dk)
+
+reaction_window: 5.0         # Tespit kuyruğunda azami bekleme (dk); aşılırsa tehdit kayıp sayılır
+
+sim_time: 480                # Toplam simülasyon süresi (dk) - 8 saatlik vardiya
+seed: 42                     # Rastgelelik tohumu (reproducibility)
+warmup_time: 30               # Istatistik toplamaya başlamadan önceki ısınma süresi (dk)
